@@ -1,0 +1,49 @@
+{
+    "intents": [
+      {
+        "tag": "saludos",
+        "patterns": [
+          "Hola",
+          "Saludos",
+          "Buenos días",
+          "Buenas tardes",
+          "Buenas noches",
+          "Qué tal"
+        ],
+        "responses": [
+          "Hola! ¿En qué puedo ayudarte hoy?",
+          "Saludos! ¿Cómo estás?",
+          "¡Hola! Me alegra que estés aquí. ¿En qué te puedo ayudar?"
+        ]
+      },
+      {
+        "tag": "como_estas",
+        "patterns": [
+          "¿Cómo estás?",
+          "¿Qué tal estás?",
+          "¿Cómo va todo?",
+          "Te ves bien"
+        ],
+        "responses": [
+          "¡Estoy bien, gracias por preguntar! ¿Y tú?",
+          "Me alegro de que lo preguntes, estoy genial. ¿En qué te puedo ayudar?",
+          "¡Genial! ¿Hay algo en lo que pueda ayudarte?"
+        ]
+      },
+      {
+        "tag": "ayuda",
+        "patterns": [
+          "Necesito ayuda",
+          "¿Me puedes ayudar?",
+          "¿Qué puedes hacer?",
+          "No sé por dónde empezar"
+        ],
+        "responses": [
+          "¡Claro que sí! ¿En qué te puedo ayudar hoy?",
+          "No te preocupes, para eso estoy. Dime, ¿qué te gustaría hacer?",
+          "¡Para eso estoy! Cuéntame qué necesitas y haré lo posible para ayudarte."
+        ]
+      }
+    ]
+  }
+  
