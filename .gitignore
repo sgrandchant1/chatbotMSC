@@ -1,0 +1,19 @@
+# Ignore virtual environment
+chatVenv/
+
+# Ignore Python cache files
+__pycache__/
+*.pyc
+
+# Ignore large files
+chatVenv/lib/python3.10/site-packages/torch/lib/libtorch_cpu.dylib
+
+# Ignore other common large files
+*.log
+*.csv
+*.dat
+*.sqlite
+
+# Ignore system files
+.DS_Store
+Thumbs.db
