@@ -60,9 +60,9 @@ learning_rate = 0.001
 num_epochs = 1000
 
 dataset = ChatDataset()
-device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 train_loader = DataLoader(dataset=dataset, batch_size=batch_size, shuffle=True)
 
+device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 model = NeuralNet(input_size, hidden_size, output_size).to(device)
 
 criterion = nn.CrossEntropyLoss()
@@ -89,3 +89,16 @@ for epoch in range(num_epochs):
 
 print(f'final loss, loss = {loss.item():.4f}')
 
+data = {
+    "model_state": model.state_dict(),
+    "input_size": input_size,
+    "output_size": output_size, 
+    "hidden_size": hidden_size,
+    "all_words": all_words,
+    "tags": tags
+}
+
+FILE = "data.pth"
+torch.save(data, FILE)
+
+print(f"training comlete. file saved to {FILE}")
