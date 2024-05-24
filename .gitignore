@@ -17,3 +17,4 @@ chatVenv/lib/python3.10/site-packages/torch/lib/libtorch_cpu.dylib
 # Ignore system files
 .DS_Store
 Thumbs.db
+chatVenv/
