@@ -8,7 +8,7 @@
           "Buenos días",
           "Buenas tardes",
           "Buenas noches",
-          "Qué tal"
+          "Que tal"
         ],
         "responses": [
           "Hola! ¿En qué puedo ayudarte hoy?",
@@ -19,9 +19,9 @@
       {
         "tag": "como_estas",
         "patterns": [
-          "¿Cómo estás?",
-          "¿Qué tal estás?",
-          "¿Cómo va todo?",
+          "Como estas?",
+          "Qua tal estas?",
+          "Como va todo?",
           "Te ves bien"
         ],
         "responses": [
@@ -34,8 +34,8 @@
         "tag": "ayuda",
         "patterns": [
           "Necesito ayuda",
-          "¿Me puedes ayudar?",
-          "¿Qué puedes hacer?",
+          "Me puedes ayudar?",
+          "Qué puedes hacer?",
           "No sé por dónde empezar"
         ],
         "responses": [
