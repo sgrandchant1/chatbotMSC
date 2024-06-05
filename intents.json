@@ -1,49 +1,919 @@
 {
     "intents": [
-      {
-        "tag": "saludos",
-        "patterns": [
-          "Hola",
-          "Saludos",
-          "Buenos días",
-          "Buenas tardes",
-          "Buenas noches",
-          "Que tal"
-        ],
-        "responses": [
-          "Hola! ¿En qué puedo ayudarte hoy?",
-          "Saludos! ¿Cómo estás?",
-          "¡Hola! Me alegra que estés aquí. ¿En qué te puedo ayudar?"
-        ]
-      },
-      {
-        "tag": "como_estas",
-        "patterns": [
-          "Como estas?",
-          "Qua tal estas?",
-          "Como va todo?",
-          "Te ves bien"
-        ],
-        "responses": [
-          "¡Estoy bien, gracias por preguntar! ¿Y tú?",
-          "Me alegro de que lo preguntes, estoy genial. ¿En qué te puedo ayudar?",
-          "¡Genial! ¿Hay algo en lo que pueda ayudarte?"
-        ]
-      },
-      {
-        "tag": "ayuda",
-        "patterns": [
-          "Necesito ayuda",
-          "Me puedes ayudar?",
-          "Qué puedes hacer?",
-          "No sé por dónde empezar"
-        ],
-        "responses": [
-          "¡Claro que sí! ¿En qué te puedo ayudar hoy?",
-          "No te preocupes, para eso estoy. Dime, ¿qué te gustaría hacer?",
-          "¡Para eso estoy! Cuéntame qué necesitas y haré lo posible para ayudarte."
-        ]
-      }
+        {
+            "tag": "saludos",
+            "patterns": [
+                "Hola",
+                "Saludos",
+                "Buenos d\u00edas",
+                "Buenas tardes",
+                "Buenas noches",
+                "Que tal"
+            ],
+            "responses": [
+                "Hola! \u00bfEn qu\u00e9 puedo ayudarte hoy?",
+                "Saludos! \u00bfC\u00f3mo est\u00e1s?",
+                "\u00a1Hola! Me alegra que est\u00e9s aqu\u00ed. \u00bfEn qu\u00e9 te puedo ayudar?"
+            ]
+        },
+        {
+            "tag": "como_estas",
+            "patterns": [
+                "Como estas?",
+                "Qua tal estas?",
+                "Como va todo?"
+            ],
+            "responses": [
+                "\u00a1Estoy bien, gracias por preguntar! \u00bfY t\u00fa?",
+                "Me alegro de que lo preguntes, estoy genial. \u00bfEn qu\u00e9 te puedo ayudar?",
+                "\u00a1Genial! \u00bfHay algo en lo que pueda ayudarte?"
+            ]
+        },
+        {
+            "tag": "ayuda",
+            "patterns": [
+                "necesito ayuda",
+                "Me puedes ayudar?",
+                "No se por donde empezar"
+            ],
+            "responses": [
+                "Claro que s\u00ed! \u00bfEn qu\u00e9 te puedo ayudar hoy?",
+                "No te preocupes, para eso estoy. Dime, \u00bfqu\u00e9 te gustar\u00eda hacer?",
+                "\u00a1Para eso estoy! Cu\u00e9ntame qu\u00e9 necesitas y har\u00e9 lo posible para ayudarte."
+            ]
+        },
+        {
+            "tag": "debito_automatico",
+            "patterns": [
+                "a que horario se hace el debito automatico para el pago de la cuota de un credito?",
+                "Horario de debito automatico",
+                "Cuando se debita automaticamente el pago del credito",
+                "a que hora se realiza el debito automatico para el pago de la cuota de mi credito?"
+            ],
+            "responses": [
+                "Los clientes que cuenten con el servicio de d\u00e9bito autom\u00e1tico para el pago de cr\u00e9ditos deben depositar o contar con saldo en sus cuentas de ahorro hasta antes de las 20:00 del d\u00eda de la fecha de pago."
+            ]
+        },
+        {
+            "tag": "autenticacion_robusta",
+            "patterns": [
+                "mecanismos de autenticacion robusta",
+                "Autenticacian robusta",
+                "Metodos de autenticacion",
+                "autenticacion"
+            ],
+            "responses": [
+                "Los mecanismos de seguridad te permiten realizar tus transacciones de manera segura. Aqu\u00ed te presentamos los m\u00e1s utilizados: - Credenciales: Para ingresar a tu Banca M\u00f3vil o Banca por Internet por primera vez necesitas un usuario, contrase\u00f1a y pregunta secreta. Son personales y las definir\u00e1s t\u00fa, no las compartas con nadie. - Registro de dispositivo: Para realizar transacciones en tu Banca M\u00f3vil debes registrar el dispositivo que vayas a utilizar. - Segunda validaci\u00f3n: Para realizar transacciones se requiere de una clave token o c\u00f3digo de validaci\u00f3n que recibir\u00e1s directamente en tu App BMSC M\u00f3vil. El banco utiliza al menos dos de los tres factores principales de autenticaci\u00f3n de personas. Estos son: Factor de inherencia (algo que eres), factor de posesi\u00f3n (algo que tienes) y factor de conocimiento (algo que conoces)."
+            ]
+        },
+        {
+            "tag": "dudas",
+            "patterns": [
+                "Tengo dudas",
+                "Tengo una duda",
+                "Dudas frecuentes",
+                "todaia no estoy seguro"
+            ],
+            "responses": [
+                "Es normal tener dudas, es por eso que toda instituci\u00f3n financiera pone a su disposici\u00f3n todos sus canales de comunicaci\u00f3n para atender consultas como ser: Redes sociales, Contact Center, Agencias. Sin embargo, a la hora de hacer un reclamo es importante que este se registre y se formalice. Es por eso que debes realizar los reclamos a trav\u00e9s de: Agencias (Punto de reclamo), P\u00e1gina web, Call Center. Recuerda que debes solicitar un comprobante o referencia del registro de tu reclamo y que la entidad tiene cinco d\u00edas h\u00e1biles para responder a tu reclamo de manera formal."
+            ]
+        },
+        {
+            "tag": "reclamo_escrito",
+            "patterns": [
+                "Como efectuar un reclamo",
+                "Reclamo",
+                "Hacer un reclamo"
+            ],
+            "responses": [
+                "Si desea ingresar un reclamo por escrito debe redactar y entregar una nota dirigida al Banco en el Punto de Reclamo disponible en cada agencia. Llamando a nuestra Central de Consultas tendr\u00e1s la oportunidad de ingresar un reclamo tambien. El ejecutivo de atenci\u00f3n al cliente te solicitar\u00e1 toda la informaci\u00f3n necesaria. Incluso puedes ingresa a nuestra p\u00e1gina web, en la parte inferior de la pantalla encontrar\u00e1s un bot\u00f3n que te redirigir\u00e1 al formulario de reclamo. Ingresa todos los campos que corresponda y tu reclamo se habr\u00e1 ingresado correctamente. Finalmente puedes aprox\u00edmate a la agencia del Banco de tu preferencia, en esta encontrar\u00e1s un punto de reclamo donde podr\u00e1s hacernos conocer tu situaci\u00f3n para brindarle una soluci\u00f3n a la brevedad posible."
+            ]
+        },
+        {
+            "tag": "afiliacion_banca_movil",
+            "patterns": [
+                "Que debo hacer para ingresar a la Banca Movil?",
+                "Ingresar a Banca Movil",
+                "Afiliarse a Banca Movil"
+            ],
+            "responses": [
+                "Si no te afiliaste, puedes hacerlo desde la App BMSC M\u00f3vil en el apartado de Afiliaci\u00f3n y seguir los pasos indicados. Necesitar\u00e1s un n\u00famero de celular y correo electr\u00f3nico registrados en el banco. Para validar tu identidad, se enviar\u00e1 un c\u00f3digo de seguridad a tu correo electr\u00f3nico para tu autenticaci\u00f3n. Tambi\u00e9n puedes revisar nuestro videotutorial en el siguiente link: https://is.gd/DlwOgG."
+            ]
+        },
+        {
+            "tag": "recuperar_usuario_contrase\u00f1a",
+            "patterns": [
+                "Que tengo que hacer si no recuerdo mi usuario o contrase\u00f1a para ingresar a la Banca Movil?",
+                "Me Olvide mi usuario de Banca Movil",
+                "Me Olvide mi contrase\u00f1a de Banca Movil"
+            ],
+            "responses": [
+                "Si no recuerdas tu usuario y/o contrase\u00f1a, puedes contactarte mediante los siguientes canales de atenci\u00f3n: L\u00ednea Gratuita: 800 17 0777, Correo Electr\u00f3nico: callcenter@bmsc.com.bo, Agencias a Nivel Nacional. Si no recuerdas tu contrase\u00f1a, en la p\u00e1gina principal de la Banca por Internet ingresa el Usuario y presiona la opci\u00f3n 'Ingresar'. En la segunda p\u00e1gina haz clic en la opci\u00f3n '\u00bfHa olvidado su contrase\u00f1a?', ingresa la respuesta secreta y te llegar\u00e1 un correo electr\u00f3nico con la contrase\u00f1a temporal para acceder nuevamente."
+            ]
+        },
+        {
+            "tag": "primer_ingreso",
+            "patterns": [
+                "Como hago el primer ingreso desde la Banca Movil o Banca por Internet?",
+                "Primer ingreso a Banca Movil",
+                "Primer ingreso a Banca por Internet"
+            ],
+            "responses": [
+                "Puedes realizar tu primera afiliaci\u00f3n desde Banca M\u00f3vil siguiendo los pasos desde el apartado de 'Afiliaci\u00f3n'. Tambi\u00e9n puedes realizar tu primera afiliaci\u00f3n desde la Banca por Internet. Si es tu primer ingreso, debes cambiar tu contrase\u00f1a ingresando primeramente desde nuestra p\u00e1gina web www.bmsc.com.bo. Posterior al cambio, reci\u00e9n podr\u00e1s ingresar con tu nueva contrase\u00f1a a tu Banca M\u00f3vil."
+            ]
+        },
+        {
+            "tag": "nueva_contrase\u00f1a",
+            "patterns": [
+                "Que debo hacer cuando me llega una nueva contrase\u00f1a a mi correo",
+                "Nueva contrase\u00f1a recibida",
+                "Cambio de contrase\u00f1a"
+            ],
+            "responses": [
+                "Una vez llega a tu correo una contrase\u00f1a nueva, necesariamente deberas cambiarla mediante nuestra pagina web www.bmsc.com.bo. Posterior al cambio, podras ingresar con tu nueva contrase\u00f1a a tu Banca Movil. A continuacion, los pasos que debes seguir: Paso 1.- Ingresa al Banca por Internet: El apartado de Banca por Internet se encuentra ubicado en la parte superior derecha de la pagina web del Banco o puedes ingresar al siguiente link: https://bnet.bmsc.com.bo/BMSC.ICBanking.WebUI/Administration.WebUI/Pages/General/Login.aspx. Paso 2.- Completa los siguientes campos: Nombre de usuario: Ingresa tu usuario. (Indistinto mayusculas o minusculas) No soy un robot: Habilitar el boton y seleccionar las imagenes que le pida el codigo captcha, presiona INGRESAR. Contrase\u00f1a.- Introduce la clave que se te envio a tu correo respetando mayusculas y numeros. A continuacion, presiona SIGUIENTE. Paso 3.- Te pedira que modifiques tus accesos: Digite su contrase\u00f1a actual: Ingresa la contrase\u00f1a que te llego al correo. Digite su nueva contrase\u00f1a: Crea una nueva contrase\u00f1a solo letras y numeros, sin espacios ni caracteres especiales, (arriba de 8 caracteres entre letras y numeros, minimamente 3 numeros y las letras entre mayusculas y minusculas). Digite su nueva contrase\u00f1a: Crea una nueva contrase\u00f1a (solo letras y numeros), sin espacios ni caracteres especiales, (entre 8 y 20 caracteres), minimamente 3 numeros y una letra mayuscula. Presiona CONFIRMAR. Paso 4.- Respuesta Secreta, debes colocar la respuesta de tu pregunta secreta, si no lo recuerdas, puedes ir a la opcion debajo del cuadro ENVIARME MI PREGUNTA A MI CORREO, colocas tu correo y recibiras la pregunta que registraste (Respetando mayusculas y minusculas). Una vez concluyas con el cambio de contrase\u00f1a, ya podras ingresar a tu Aplicacion Banca Movil."
+            ]
+        },
+        {
+            "tag": "cambio_dispositivo_celular",
+            "patterns": [
+                "Que debo hacer si cambie de dispositivo celular",
+                "Cambio de dispositivo celular",
+                "Nuevo dispositivo celular"
+            ],
+            "responses": [
+                "Si cambiaste de dispositivo celular es necesario que se elimine el registro del celular anterior y poder registrar uno nuevo. Puedes solicitar la eliminacion del dispositivo anterior mediante los siguientes canales: Call Center, siempre y cuando tengas tu numero de celular actualizado en nuestro sistema. Agencias, presentando tu carnet de identidad."
+            ]
+        },
+        {
+            "tag": "actualizar_correo",
+            "patterns": [
+                "Como puedo actualizar mi correo electronico",
+                "Actualizar correo electronico",
+                "Cambio de correo electronico"
+            ],
+            "responses": [
+                "Puedes actualizarlo a traves de los siguientes canales: 1) Call Center, siempre y cuando tengas tu numero de celular actualizado en nuestro sistema. Si no se encuentra actualizado, sera necesario realizar este paso previamente. 2) Agencias, presentando tu carnet de identidad."
+            ]
+        },
+        {
+            "tag": "intentos_ingreso",
+            "patterns": [
+                "Cuantos intentos tengo para ingresar mi informacion antes de que quede bloqueado el acceso en Banca Movil y Banca por Internet",
+                "Limite de intentos de ingreso",
+                "Bloqueo de cuenta por intentos fallidos"
+            ],
+            "responses": [
+                "Tienes 3 intentos, al tercer ingreso incorrecto, queda bloqueado y puedes solicitar el desbloqueo por los siguientes medios: Linea Gratuita (Bolivia): 800 17 0777. Linea desde el Exterior: 591 22114010. Correo Electronico: callcenter@bmsc.com.bo. Agencias a nivel nacional."
+            ]
+        },
+        {
+            "tag": "olvido_respuesta_secreta",
+            "patterns": [
+                "Que debo hacer si no recuerdo la respuesta a mi pregunta secreta",
+                "Olvide la respuesta a mi pregunta secreta",
+                "Recuperar respuesta secreta"
+            ],
+            "responses": [
+                "Si no lo recuerdas, puedes ir a la opcion debajo del cuadro ENVIARME MI PREGUNTA A MI CORREO, colocas tu correo y recibiras la pregunta que registraste (Respetando mayusculas y minusculas). Puedes contactarte mediante los siguientes canales de atencion: Linea Gratuita (Bolivia): 800 17 0777. Linea desde el Exterior: 591 22114010. Correo Electronico: callcenter@bmsc.com.bo."
+            ]
+        },
+        {
+            "tag": "pantalla_inicio_colgada",
+            "patterns": [
+                "Que debo hacer si el ingreso a la aplicacion movil queda colgado en la pantalla de inicio",
+                "Pantalla de inicio colgada",
+                "Problema con la aplicacion movil",
+                "la pantalla de mi banca movil se congelo. que hago?"
+            ],
+            "responses": [
+                "Tienes disponible las siguientes alternativas: En IOS: Puedes intentar cerrando todas las aplicaciones abiertas que mantengas en ese momento y volver a intentar o reiniciando el celular. En Android: Puedes intentar cerrando todas las aplicaciones abiertas o tambien ingresando a la CONFIGURACION del dispositivo celular, en el apartado de APLICACIONES hacer clic en la aplicacion de BMSC Movil, en la opcion de ALMACENAMIENTO o MEMORIA borrar, eliminar o limpiar datos y cache, luego reinicia tu dispositivo celular. En caso de no tener exito puedes ponerte en contacto con el banco con las siguientes opciones: Linea Gratuita (Bolivia): 800 17 0777. Linea desde el Exterior: 591 22114010. Correo Electronico: callcenter@bmsc.com.bo."
+            ]
+        },
+        {
+            "tag": "codigo_validacion",
+            "patterns": [
+                "Que debo hacer si no me llega el codigo de validacion para completar mi transaccion",
+                "Codigo de validacion no recibido",
+                "Problema con codigo de validacion"
+            ],
+            "responses": [
+                "Tienes disponible las siguientes alternativas: Para IOS/Android: Puedes ingresar a los AJUSTES o CONFIGURACION del dispositivo celular al boton de APLICACIONES, hacer clic en la aplicacion de BMSC Movil, verificar si la opcion de NOTIFICACIONES se encuentra activa, caso contrario habilitarla, luego reinicia tu dispositivo celular. En caso de no tener exito, puedes ponerte en contacto con el banco con las siguientes opciones: Linea Gratuita (Bolivia): 800 17 0777. Linea desde el Exterior: 591 22114010. Correo Electronico: callcenter@bmsc.com.bo."
+            ]
+        },
+        {
+            "tag": "obtener_banca_movil",
+            "patterns": [
+                "Que debo hacer para obtener Banca Movil si mi dispositivo no tiene sistema operativo Android o iOS",
+                "Obtener Banca Movil sin Android o iOS",
+                "Banca Movil en dispositivo sin Android o iOS"
+            ],
+            "responses": [
+                "Nuestra aplicacion de Banca Movil se encuentra disponible unicamente para dispositivos iOS y Android que cuenten con servicios de Google. Para poder utilizar nuestra Banca Movil es necesario que cuentes con un dispositivo con estas caracteristicas. La Banca Movil es necesaria tambien en caso de que desees realizar transacciones por Banca por Internet. Si no cuentas con un dispositivo iOS o Android, no podras descargar la Banca Movil y tampoco podras realizar transacciones a traves de Banca por internet."
+            ]
+        },
+        {
+            "tag": "banca_movil_huawei",
+            "patterns": [
+                "Que debo hacer si ya cuento con Banca Movil en mi dispositivo Huawei u otro sin servicios de Google integrados y lo utilizaba con token fisico",
+                "Banca Movil en Huawei sin servicios de Google",
+                "Uso de token fisico en dispositivo Huawei"
+            ],
+            "responses": [
+                "Nuestra aplicacion de Banca Movil se encuentra disponible unicamente para dispositivos iOS y Android con servicios de Google y para poder realizar transacciones mediante Banca por Internet sera necesario tambien que dispongas de la aplicacion. El token fisico ya no se encuentra disponible para su renovacion. En caso de que se intente descargar la Aplicacion desde la AppGallery, esta ya no tendra soporte."
+            ]
+        },
+        {
+            "tag": "confirmar_transferencia",
+            "patterns": [
+                "Como puedo saber si complete exitosamente una transferencia que realice a otro Banco desde mi Aplicacion Movil",
+                "Confirmar transferencia en Banca Movil",
+                "Estado de transferencia en Banca Movil"
+            ],
+            "responses": [
+                "Necesitas ingresar a la Banca Movil, en el menu hacer clic en el boton ACTIVIDADES DE TRANSFERENCIA, donde podras identificar el estado de tu transferencia con los siguientes mensajes: ORDEN ACEPTADA: Transferencia completada, fondos acreditados a la cuenta destino. ORDEN PENDIENTE: Transferencia en transito, aun sin confirmacion de recepcion por parte del otro Banco. En esta opcion necesitas esperar a que la transaccion pueda completarse en uno de los tres ciclos de la ACCL (Administradora de Camaras de Compensacion y Liquidacion): - Ciclo 1: 01:00 a 12:50. - Ciclo 2: 13:00 a 14:50. - Ciclo 3: 15:00 a 23:00. Si esta dentro de las 23:00 a 01:00 no se realizara la transferencia y le saldra un mensaje en pantalla comunicando esto. ORDEN CANCELADA/RECHAZADA: Transferencia no completada, los fondos regresaron a tu saldo disponible."
+            ]
+        },
+        {
+            "tag": "diferencia_saldo",
+            "patterns": [
+                "Cual es la diferencia entre Saldo total y Saldo disponible",
+                "Saldo total vs Saldo disponible",
+                "Diferencia entre Saldo total y Saldo disponible"
+            ],
+            "responses": [
+                "SALDO TOTAL: Es la sumatoria de todos los saldos de tu cuenta, en los cuales puedes considerar, saldo pignorado, saldo bloqueado, saldo retenido, saldo disponible. SALDO DISPONIBLE: Es el monto que puedes usar efectivamente de tu cuenta."
+            ]
+        },
+        {
+            "tag": "ver_movimientos_pasados",
+            "patterns": [
+                "Por que no puedo ver movimientos pasados en mi Aplicacion Movil",
+                "Ver movimientos pasados en Banca Movil",
+                "Historial de movimientos en Banca Movil"
+            ],
+            "responses": [
+                "La Banca Movil principalmente te permite visualizar los ultimos 30 movimientos de tus cuentas. Adicionalmente dentro de HISTORIAL DE TRANSFERENCIAS puede colocarse un intervalo de tiempo especifico. En caso de que necesites verificar movimientos pasados mediante la Banca por internet, puedes ingresar mediante nuestra pagina web www.bmsc.com.bo al boton BANCA POR INTERNET o ingresando al link https://bnet.bmsc.com.bo/BMSC.ICBanking.WebUI/Administration.WebUI/Pages/General/Login.aspx. Una vez hayas ingresado te diriges al MENU, luego al boton CUENTAS, finalmente al boton EXTRACTOS, seleccionas la cuenta de la cual deseas ver los movimientos, puede descargar los movimientos de manera trimestral (90 dias) desde la apertura de la cuenta, tienes la opcion de descargarlos en un archivo Excel o Pdf."
+            ]
+        },
+        {
+            "tag": "ampliar_limite_transacciones",
+            "patterns": [
+                "Como puedo ampliar el limite de transacciones para la Banca por Internet y Banca Movil",
+                "Ampliar limite de transacciones en Banca Movil",
+                "Ampliar limite de transacciones en Banca por Internet"
+            ],
+            "responses": [
+                "Puedes solicitar el incremento hasta un limite maximo de USD 3000.- por los siguientes medios: Linea Gratuita (Bolivia): 800 17 0777 Linea desde el Exterior: 591 22114010 Correo Electronico: callcenter@bmsc.com.bo Tambien puedes acudir a cualquiera de nuestras agencias a nivel nacional, necesitas tu carnet de identidad original y vigente. Existe tambien la opcion de cambiar el limite de transacciones segun su tipo: Debes ingresar a tu Banca por Internet a la opcion Administracion y seleccionar Limites por funcionalidad. La clave de confirmacion para realizar el cambio llegara a tu aplicacion de Banca Movil."
+            ]
+        },
+        {
+            "tag": "operaciones_money_gram",
+            "patterns": [
+                "En que horarios se puede realizar operaciones a traves de Money Gram",
+                "Horario para operaciones con Money Gram",
+                "Horario de Money Gram"
+            ],
+            "responses": [
+                "Lunes a Viernes hasta las 16:00 pm y Sabados hasta las 13:00 pm."
+            ]
+        },
+        {
+            "tag": "operaciones_western_union",
+            "patterns": [
+                "En que horarios se puede realizar operaciones a traves de Western Union",
+                "Horario para operaciones con Western Union",
+                "Horario de Western Union"
+            ],
+            "responses": [
+                "Todos los dias hasta las 19:00 pm."
+            ]
+        },
+        {
+            "tag": "operaciones_giros_bts_dolex",
+            "patterns": [
+                "En que horarios se puede realizar operaciones a traves de GIROS BTS y DOLEX",
+                "Horario para operaciones con GIROS BTS y DOLEX",
+                "Horario de GIROS BTS y DOLEX"
+            ],
+            "responses": [
+                "Sin restriccion de horario."
+            ]
+        },
+        {
+            "tag": "operaciones_safi",
+            "patterns": [
+                "En que horarios se puede realizar operaciones a traves de SAFI",
+                "Horario para operaciones con SAFI",
+                "Horario de SAFI"
+            ],
+            "responses": [
+                "Todos los dias hasta las 17:00 pm."
+            ]
+        },
+        {
+            "tag": "operaciones_sistema_sintesis",
+            "patterns": [
+                "En que horarios se puede realizar operaciones a traves del SISTEMA SINTESIS",
+                "Horario para operaciones con SISTEMA SINTESIS",
+                "Horario de SISTEMA SINTESIS"
+            ],
+            "responses": [
+                "Todos los dias hasta las 18:00 pm."
+            ]
+        },
+        {
+            "tag": "operaciones_copernico",
+            "patterns": [
+                "En que horarios se puede realizar operaciones a traves de COPERNICO",
+                "Horario para operaciones con COPERNICO",
+                "Horario de COPERNICO"
+            ],
+            "responses": [
+                "Lunes a Viernes hasta las 18:00 pm y Sabados hasta las 13:00 pm."
+            ]
+        },
+        {
+            "tag": "pago_servicios_basicos",
+            "patterns": [
+                "En que horarios se puede realizar el pago de servicios basicos",
+                "Horario para pago de servicios basicos",
+                "Horario de pago de servicios basicos"
+            ],
+            "responses": [
+                "Todos los dias hasta las 19:00 pm."
+            ]
+        },
+        {
+            "tag": "pago_instituciones_educativas",
+            "patterns": [
+                "En que horarios se puede realizar pagos de instituciones educativas",
+                "Horario para pago de instituciones educativas",
+                "Horario de pago de instituciones educativas"
+            ],
+            "responses": [
+                "No existe una restriccion de horario."
+            ]
+        },
+        {
+            "tag": "pago_ruat",
+            "patterns": [
+                "En que horarios se puede realizar el pago de RUAT",
+                "Horario para pago de RUAT",
+                "Horario de pago de RUAT"
+            ],
+            "responses": [
+                "Todos los dias hasta las 19:00 pm."
+            ]
+        },
+        {
+            "tag": "transferir_dinero_cuenta",
+            "patterns": [
+                "Puedo transferir dinero a cualquier tipo de cuenta",
+                "Transferir dinero a cualquier cuenta",
+                "Transferir dinero entre cuentas"
+            ],
+            "responses": [
+                "Si, los depositos pueden realizarse a cualquier cuenta ya sea caja de ahorro o cuenta corriente dentro del Banco."
+            ]
+        },
+        {
+            "tag": "monto_transferir_cuenta_terceros",
+            "patterns": [
+                "Cual es el monto que se puede transferir a cuenta de terceros",
+                "Limite de transferencia a cuenta de terceros",
+                "Monto maximo de transferencia a terceros"
+            ],
+            "responses": [
+                "El limite para realizar transferencias a cuenta de terceros es 550 USD o su equivalente en bolivianos."
+            ]
+        },
+        {
+            "tag": "transferencias_24_horas",
+            "patterns": [
+                "Las transferencias a terceros funcionan las 24 horas del dia",
+                "Transferencias a terceros 24/7",
+                "Horario de transferencias a terceros"
+            ],
+            "responses": [
+                "Si, puedes realizar transferencias a terceros las 24 horas los 365 dias del ano y la transferencia es en linea."
+            ]
+        },
+        {
+            "tag": "limite_transferencias_cuentas_propias",
+            "patterns": [
+                "Cual es el limite para transferencias entre cuentas propias",
+                "Limite de transferencias entre cuentas propias",
+                "Monto maximo de transferencias entre cuentas propias"
+            ],
+            "responses": [
+                "El limite para transferencias entre cuentas propias es de 20,000 USD o su equivalente en bolivianos."
+            ]
+        },
+        {
+            "tag": "pago_prestamos",
+            "patterns": [
+                "Se puede pagar cualquier prestamo",
+                "Pago de cualquier prestamo",
+                "Prestamos pagables en cajeros automaticos"
+            ],
+            "responses": [
+                "Si, todas las cuotas de los prestamos del Banco que se encuentren vigentes (que no esten en mora), pueden ser pagadas en los cajeros automaticos."
+            ]
+        },
+        {
+            "tag": "pago_cuota_prestamo",
+            "patterns": [
+                "Al momento de pagar un prestamo solo se puede pagar la cuota",
+                "Pago de cuota de prestamo",
+                "Solo pago de cuota de prestamo"
+            ],
+            "responses": [
+                "Si, puedes pagar el monto de la cuota y tiene que ser en la fecha de vencimiento."
+            ]
+        },
+        {
+            "tag": "pago_prestamo_horario",
+            "patterns": [
+                "Puedo pagar mi prestamo en cualquier horario",
+                "Horario para pagar prestamo",
+                "Horario de pago de prestamo"
+            ],
+            "responses": [
+                "No, solo de lunes a viernes de 08:30 a 21:00. Sabados y domingos de 08:30 a 14:00."
+            ]
+        },
+        {
+            "tag": "pago_tarjeta_credito",
+            "patterns": [
+                "Se puede pagar cualquier tarjeta de credito del Banco Mercantil Santa Cruz",
+                "Pago de cualquier tarjeta de credito",
+                "Tarjetas de credito pagables en cajeros automaticos"
+            ],
+            "responses": [
+                "Si, todas las tarjetas que se encuentren vigentes, es decir que no esten en mora."
+            ]
+        },
+        {
+            "tag": "pago_monto_total_tarjeta_credito",
+            "patterns": [
+                "Solo se puede pagar el monto total adeudado de mi Tarjeta de Credito",
+                "Pago del monto total de tarjeta de credito",
+                "Pago de deuda total de tarjeta de credito"
+            ],
+            "responses": [
+                "No, puedes pagar el monto minimo de la tarjeta, el total de la deuda u otro monto."
+            ]
+        },
+        {
+            "tag": "pago_tarjeta_credito_horario",
+            "patterns": [
+                "Puedo pagar mi tarjeta de credito en cualquier horario",
+                "Horario para pagar tarjeta de credito",
+                "Horario de pago de tarjeta de credito"
+            ],
+            "responses": [
+                "No, solo puedes pagar la deuda de tarjetas de credito de lunes a viernes de 08:30 a 21:00. Sabados y domingos de 08:30 a 14:00."
+            ]
+        },
+        {
+            "tag": "deposito_efectivo_cajeros",
+            "patterns": [
+                "En que tipo de cajeros puedo hacer depositos en efectivo",
+                "Depositos en efectivo en cajeros",
+                "Cajeros con opcion de deposito"
+            ],
+            "responses": [
+                "Actualmente el banco cuenta con mas de 450 cajeros automaticos a nivel nacional de los cuales 221 cajeros tienen la opcion de deposito y estan debidamente senalados."
+            ]
+        },
+        {
+            "tag": "monto_maximo_deposito_cajero",
+            "patterns": [
+                "Hasta que monto puedo depositar en el cajero automatico",
+                "Monto maximo de deposito en cajero",
+                "Limite de deposito en cajero automatico"
+            ],
+            "responses": [
+                "Se pueden realizar depositos de efectivo hasta 3,000 USD o su equivalente en bolivianos."
+            ]
+        },
+        {
+            "tag": "billetes_por_transaccion",
+            "patterns": [
+                "Puedo ingresar varios billetes o debo hacerlo uno por uno",
+                "Deposito de varios billetes en cajero",
+                "Deposito de billetes en cajero automatico"
+            ],
+            "responses": [
+                "Se puede ingresar hasta 35 billetes por transaccion, en caso de depositar varias piezas, sugerimos hacerlo por partes utilizando la opcion 'incrementar deposito'."
+            ]
+        },
+        {
+            "tag": "depositos_instantaneos_cajeros",
+            "patterns": [
+                "Los depositos en cajeros automaticos son al instante",
+                "Depositos instantaneos en cajeros",
+                "Depositos al instante en cajeros automaticos"
+            ],
+            "responses": [
+                "Si, los depositos en cajeros automaticos se hacen efectivos al instante."
+            ]
+        },
+        {
+            "tag": "limite_compras_internet",
+            "patterns": [
+                "Cual es el monto limite de mi Tarjeta de Debito para Compras por Internet",
+                "Limite de compras por Internet",
+                "Monto maximo de compras online con tarjeta de debito"
+            ],
+            "responses": [
+                "Tu tarjeta de debito se encuentra habilitada por defecto en comercios locales online y en comercios internacionales on line hasta USD 50. Adicionalmente existe un limite quincenal de USD 500 para transacciones con el exterior (consumos en POS, compras por internet, retiro de efectivo) y tambien un limite semanal de USD 200 para retiros de efectivo en el exterior y pagos por internet en determinados Rubros (Este limite considera transacciones exitosas y no exitosas). Las transacciones en rubro de apuestas de manera presencial u online NO ESTAN PERMITIDAS."
+            ]
+        },
+        {
+            "tag": "limite_uso_internacional",
+            "patterns": [
+                "Cual es el monto limite de mi Tarjeta de Debito para uso internacional",
+                "Limite de uso internacional con tarjeta de debito",
+                "Monto maximo de uso internacional con tarjeta de debito"
+            ],
+            "responses": [
+                "Tu tarjeta de debito se encuentra habilitada por defecto en comercios locales online y en comercios internacionales on line hasta USD 50. Adicionalmente necesitas considerar que existe un limite quincenal (Del 1 al 15 y del 16 al ultimo dia del mes) de USD 500 para transacciones exclusivamente internacionales que es una sumatoria de todas las transacciones que realices como cliente que comprenden pagos en comercios presenciales POS, compras por internet, retiro de efectivo, transferencias, asi tambien cargos y comisiones de terceros, asi tambien, existe un limite semanal de USD 200 para retiros en efectivo de Cajeros Automaticos en el exterior y pagos por internet en determinados Rubros (este limite considera transacciones exitosas y no exitosas) en este limite necesitaras esperar 7 dias calendarios para realizar un nuevo retiro o pago. Una vez que hayas llegado al limite de uso internacional con la Tarjeta de Debito, esta queda bloqueada hasta la siguiente quincena."
+            ]
+        },
+        {
+            "tag": "ampliar_limite_internacional",
+            "patterns": [
+                "Puedo ampliar el limite de uso internacional de mi Tarjeta de Debito",
+                "Ampliar limite internacional de tarjeta de debito",
+                "Incrementar limite de uso internacional con tarjeta de debito"
+            ],
+            "responses": [
+                "No, los limites de uso internacional no pueden ser modificados."
+            ]
+        },
+        {
+            "tag": "habilitar_compras_internet",
+            "patterns": [
+                "Como habilito mi Tarjeta de Debito para Compras por Internet",
+                "Habilitar compras por internet con tarjeta de debito",
+                "Activar compras online con tarjeta de debito"
+            ],
+            "responses": [
+                "Puedes realizar la habilitacion directamente desde tu Aplicacion Movil, seleccionando en el menu ADMINISTRADOR DE TARJETAS, haz clic sobre la imagen de tu tarjeta de debito, presiona la opcion de COMPRAS POR INTERNET. Tambien puedes contactarte con el Call Center: Linea Gratuita (Bolivia): 800 17 0777. Linea desde el Exterior: 591 22114010. Correo Electronico: callcenter@bmsc.com.bo."
+            ]
+        },
+        {
+            "tag": "habilitar_compras_exterior",
+            "patterns": [
+                "Como habilito mi Tarjeta de Debito para Compras en el exterior",
+                "Habilitar compras en el exterior con tarjeta de debito",
+                "Activar compras internacionales con tarjeta de debito"
+            ],
+            "responses": [
+                "Puedes realizar la habilitacion directamente desde tu Aplicacion Movil, seleccionando en el menu ADMINISTRADOR DE TARJETAS, haz clic sobre la imagen de tu tarjeta de debito, presiona la opcion de COMPRAS EN EL EXTERIOR. Tambien puedes contactarte con el Call Center: Linea Gratuita (Bolivia): 800 17 0777. Linea desde el Exterior: 591 22114010. Correo Electronico: callcenter@bmsc.com.bo."
+            ]
+        },
+        {
+            "tag": "modificar_limite_transacciones",
+            "patterns": [
+                "Como modifico el limite de transacciones de mi Tarjeta de Debito",
+                "Modificar limite de transacciones de tarjeta de debito",
+                "Cambiar limite de compras y retiros con tarjeta de debito"
+            ],
+            "responses": [
+                "Puedes realizar la habilitacion directamente desde tu Aplicacion Movil, seleccionando en el menu ADMINISTRADOR DE TARJETAS, haz clic sobre la imagen de tu tarjeta de debito, presiona la opcion de LIMITES PARA COMPRAS Y RETIROS. Tambien puedes contactarte con el Call Center: Linea Gratuita (Bolivia): 800 17 0777. Linea desde el Exterior: 591 22114010. Correo Electronico: callcenter@bmsc.com.bo."
+            ]
+        },
+        {
+            "tag": "bloquear_tarjeta_temporal",
+            "patterns": [
+                "Puedo bloquear mi Tarjeta de Debito de manera temporal o definitiva desde la Banca Movil",
+                "Bloquear Tarjeta de Debito temporalmente",
+                "Bloquear Tarjeta de Debito permanentemente"
+            ],
+            "responses": [
+                "Puedes realizar el bloqueo directamente desde tu Aplicacion Movil, seleccionando en el menu ADMINISTRADOR DE TARJETAS, haz clic sobre la imagen de tu tarjeta de debito, presiona la opcion de BLOQUEO/DESBLOQUEO TEMPORAL o la opcion BLOQUEO PERMANENTE Y REPOSICION. Tambien puedes contactarte con el Call Center: Linea Gratuita (Bolivia): 800 17 0777. Linea desde el Exterior: 591 22114010. Correo Electronico: callcenter@bmsc.com.bo."
+            ]
+        },
+        {
+            "tag": "ampliacion_uso_tarjeta",
+            "patterns": [
+                "Cual es el limite de ampliacion de uso de mi Tarjeta de Debito",
+                "Limite de ampliacion de Tarjeta de Debito",
+                "Incrementar limite de Tarjeta de Debito"
+            ],
+            "responses": [
+                "Tienes la posibilidad de ampliar el limite de uso de tu Tarjeta de Debito hasta USD 3000. Ante cualquier duda puedes contactarte con el Call Center: Linea Gratuita (Bolivia): 800 17 0777. Linea desde el Exterior: 591 22114010. Correo Electronico: callcenter@bmsc.com.bo."
+            ]
+        },
+        {
+            "tag": "rechazo_compra_internet",
+            "patterns": [
+                "Que puedo hacer si mi Compra por Internet es rechazada",
+                "Compra por Internet rechazada",
+                "Rechazo de compra online"
+            ],
+            "responses": [
+                "En primera instancia es necesario que haga una validacion del rechazo de tu compra, validando con el comercio y/o revisando el mensaje de la transaccion. Otra validacion que debes hacer es que no hayas sobrepasado el limite permitido sumando las operaciones que realizaste con otras tarjetas de debito, tarjeta de credito y giros. Una vez verificado que se haya llegado al limite de uso internacional con la Tarjeta de Debito, esta queda bloqueada hasta la siguiente quincena. En caso de estar dentro los limites permitidos puedes contactar al Call Center para la verificacion: Linea Gratuita (Bolivia): 800 17 0777. Linea desde el Exterior: 591 22114010. Correo Electronico: callcenter@bmsc.com.bo. Adicionalmente necesitas considerar que existe un limite quincenal (Del 1 al 15 y del 16 al ultimo dia del mes) de USD 500 para transacciones exclusivamente internacionales que es una sumatoria de todas las transacciones que realices como cliente que comprenden pagos en comercios presenciales POS, compras por Internet, retiro de efectivo, transferencias, asi tambien cargos y comisiones de terceros, asi tambien, existe un limite semanal de USD 200 para retiros en efectivo de Cajeros Automaticos en el exterior y pagos por Internet en determinados Rubros (este limite considera transacciones exitosas y no exitosas) en este limite necesitar esperar 7 dias calendarios para realizar un nuevo retiro o pago."
+            ]
+        },
+        {
+            "tag": "comisiones_tarjeta_internacional",
+            "patterns": [
+                "Cuales son las comisiones por uso de mi Tarjeta de Debito de manera internacional",
+                "Comisiones por uso internacional de Tarjeta de Debito",
+                "Costo de uso internacional de Tarjeta de Debito"
+            ],
+            "responses": [
+                "Es necesario que consideres que para aplicar el cobro de comisiones, se suman todas las transacciones internacionales que realizaste con todos tus productos (pagos en comercios presenciales POS, compras por internet, retiro de efectivo, transferencias, asi tambien cargos y comisiones de terceros). Sin venta de moneda extranjera: De USD 0 a USD 1000 es Bs. 0. De USD 1000.01 en adelante es 3%. Con venta de moneda extranjera: De USD 0 a USD 1000 es Bs. 0. De USD 1000.01 en adelante es 10%."
+            ]
+        },
+        {
+            "tag": "cobro_comision",
+            "patterns": [
+                "Cuando me realizaran el cobro de comision de mi cuenta",
+                "Cobro de comision en mi cuenta",
+                "Fecha de cobro de comision"
+            ],
+            "responses": [
+                "La factura por este concepto sera emitida al dia habil siguiente de realizado el cobro de la comision."
+            ]
+        },
+        {
+            "tag": "cuentas_conjuntas_consumo",
+            "patterns": [
+                "En caso de tener cuentas conjuntas indistintas, el consumo afecta al otro titular",
+                "Cuentas conjuntas afectan al otro titular",
+                "Consumo en cuentas conjuntas"
+            ],
+            "responses": [
+                "No, unicamente se considera al cliente que realiza las transacciones."
+            ]
+        },
+        {
+            "tag": "olvido_pin",
+            "patterns": [
+                "En caso de que haya olvidado el PIN de mi tarjeta el Banco pueda reimprimirlo o modificarlo",
+                "Olvido de PIN de tarjeta",
+                "Reimprimir o modificar PIN de tarjeta"
+            ],
+            "responses": [
+                "No, al ser el codigo PIN un dato confidencial no es posible reimprimirlo o modificarlo en oficinas. Si la tarjeta de Debito es retenida en un cajero automatico del BMSC debera contactarse con el Call Center. Si no recuerda el PIN de la tarjeta, debera solicitar una nueva en Agencias del Banco con un costo el cual debera consultar en el tarifario."
+            ]
+        },
+        {
+            "tag": "costo_reposicion_tarjeta",
+            "patterns": [
+                "Cual es el costo de una reposicion de Tarjeta",
+                "Costo de reposicion de tarjeta",
+                "Precio por reposicion de tarjeta"
+            ],
+            "responses": [
+                "El costo es de Bs. 50."
+            ]
+        },
+        {
+            "tag": "renovacion_tarjeta",
+            "patterns": [
+                "Cual es el costo de una renovacion por vencimiento de Tarjeta",
+                "Costo de renovacion de tarjeta",
+                "Renovacion de tarjeta por vencimiento"
+            ],
+            "responses": [
+                "La renovacion de tarjeta es gratuita, puedes solicitar la renovacion en cualquiera de nuestras agencias, necesitas presentar tu carnet de identidad original y vigente. Tambien puedes solicitar la renovacion directamente desde tu Aplicacion Movil, seleccionando en el menu ADMINISTRADOR DE TARJETAS, haz clic sobre la imagen de tu tarjeta de debito, presiona la opcion RENOVACION o puedes visitar cualquiera de nuestras agencias, necesitas presentar tu carnet de identidad original y vigente."
+            ]
+        },
+        {
+            "tag": "limite_credito_internacional",
+            "patterns": [
+                "Cual es el monto limite de mi Tarjeta de Credito para uso internacional",
+                "Limite de uso internacional con tarjeta de credito",
+                "Monto maximo de uso internacional con tarjeta de credito"
+            ],
+            "responses": [
+                "Tu tarjeta de credito se encuentra habilitada por defecto para realizar Compras por Internet, segun el tipo de tarjeta con los siguientes montos: - Pay Banx USD 200. - Visa Internacional USD 200. - Visa Oro USD 300. - Visa Signature USD 400. - Visa Infinite USD 500. - MasterCard Internacional USD 200. - MasterCard Gold USD 300. - MasterCard Platinium USD 400. - MasterCard Black USD 500. Tambien puedes realizar la habilitacion directamente desde tu Aplicacion Movil, seleccionando en el menu ADMINISTRADOR DE TARJETAS, haz clic sobre la imagen de tu tarjeta de credito, presiona la opcion de COMPRAS POR INTERNET. En caso de requerir un monto mayor puedes contactarte por los siguientes medios: Linea Gratuita (Bolivia): 800 17 0777. Linea desde el Exterior: 591 22114010. Correo Electronico: callcenter@bmsc.com.bo."
+            ]
+        },
+        {
+            "tag": "comisiones_credito_internacional",
+            "patterns": [
+                "Cuales son las comisiones por uso de mi Tarjeta de credito de manera internacional",
+                "Comisiones por uso internacional de Tarjeta de Credito",
+                "Costo de uso internacional de Tarjeta de Credito"
+            ],
+            "responses": [
+                "Es necesario que consideres que para aplicar el cobro de comisiones, se suman todas las transacciones internacionales que realizaste con todos tus productos (pagos en comercios presenciales POS, compras por internet, retiro de efectivo, transferencias, asi tambien cargos y comisiones de terceros). De USD 0 a USD 1000 es Bs. 0. De USD 1000.01 en adelante es 10%."
+            ]
+        },
+        {
+            "tag": "restriccion_monto_internacional",
+            "patterns": [
+                "Tengo alguna restriccion de monto para el uso de mi Tarjeta de Credito de manera internacional",
+                "Restriccion de monto internacional con tarjeta de credito",
+                "Limite de uso internacional con tarjeta de credito"
+            ],
+            "responses": [
+                "No, unicamente necesitas considerar que, al llegar al monto quincenal consumido de USD 1000 ya se haran los cobros de comision correspondientes al 10%."
+            ]
+        },
+        {
+            "tag": "pago_total_deuda",
+            "patterns": [
+                "Es necesario que pague el total de mi deuda para no ingresar en mora",
+                "Pago total de deuda para no ingresar en mora",
+                "Monto minimo de pago para evitar mora"
+            ],
+            "responses": [
+                "No, puedes unicamente pagar el monto minimo calculado para no ingresar en mora."
+            ]
+        },
+        {
+            "tag": "fecha_corte_fecha_pago",
+            "patterns": [
+                "Cual es la diferencia entre la fecha de corte y la fecha limite de pago",
+                "Diferencia entre fecha de corte y fecha limite de pago",
+                "Fecha de corte vs Fecha limite de pago"
+            ],
+            "responses": [
+                "FECHA DE CORTE: Es la fecha en la que el sistema considera la finalizacion de consumos realizados en el mes y da inicio a uno nuevo. FECHA LIMITE DE PAGO: Es la fecha maxima que tiene el consumidor para realizar el pago total o minimo del consumo realizado en el mes."
+            ]
+        },
+        {
+            "tag": "comision_adelanto_efectivo",
+            "patterns": [
+                "Cual es la comision que se me cobran por solicitar un adelanto de efectivo",
+                "Comision por adelanto de efectivo",
+                "Costo por adelanto de efectivo"
+            ],
+            "responses": [
+                "Las comisiones son: - En Cajero Automatico es el 3%. - En Oficinas es el 3%. *Se aplican comisiones adicionales dependiendo del tipo de tarjeta*. Tambien puedes solicitar el adelanto de efectivo por nuestro Call Center donde no se te cobra la comision del 3%, pero si las comisiones adicionales dependiendo del tipo de tarjeta. Este tipo de beneficio es permanente. Solo aplica para personas naturales, no aplica a PayBanx."
+            ]
+        },
+        {
+            "tag": "habilitar_compras_exterior_credito",
+            "patterns": [
+                "Como habilito mi Tarjeta de Credito para Compras en el exterior",
+                "Habilitar compras en el exterior con tarjeta de credito",
+                "Activar compras internacionales con tarjeta de credito"
+            ],
+            "responses": [
+                "Puedes realizar la habilitacion directamente desde tu Aplicacion Movil, seleccionando en el menu ADMINISTRADOR DE TARJETAS, haz clic sobre la imagen de tu tarjeta de credito, presiona la opcion de COMPRAS EN EL EXTERIOR. Tambien puedes contactarte con el Call Center: Linea Gratuita (Bolivia): 800 17 0777. Linea desde el Exterior: 591 22114010. Correo Electronico: callcenter@bmsc.com.bo."
+            ]
+        },
+        {
+            "tag": "bloquear_tarjeta_credito",
+            "patterns": [
+                "puedo bloquear mi tarjeta de credito de manera temporal o definitiva desde la banca movil",
+                "bloquear tarjeta de credito temporalmente",
+                "bloquear tarjeta de credito permanentemente"
+            ],
+            "responses": [
+                "Puedes realizar el bloqueo directamente desde tu Aplicacion Movil, seleccionando en el menu ADMINISTRADOR DE TARJETAS, haz clic sobre la imagen de tu tarjeta de credito, presiona la opcion de BLOQUEO/DESBLOQUEO TEMPORAL o la opcion BLOQUEO PERMANENTE Y REPOSICION. Tambien puedes contactarte con el Call Center: Linea Gratuita (Bolivia): 800 17 0777. Linea desde el Exterior: 591 22114010. Correo Electronico: callcenter@bmsc.com.bo."
+            ]
+        },
+        {
+            "tag": "tiempo_monto_pignorado",
+            "patterns": [
+                "cuanto tiempo debo esperar para que un monto pignorado regrese a mi cuenta por el cierre de una tarjeta de credito",
+                "tiempo para que regrese monto pignorado por cierre de tarjeta",
+                "cuanto tarda en regresar monto pignorado por cierre de tarjeta de credito"
+            ],
+            "responses": [
+                "Es necesario considerar que luego de realizar la solicitud para el cierre de tu Tarjeta de Credito, necesitaras aguardar un plazo del equivalente a dos cierres mensuales para finalizar el proceso y el monto pignorado regrese a tu cuenta."
+            ]
+        },
+        {
+            "tag": "olvido_pin",
+            "patterns": [
+                "en caso de que haya olvidado el pin de mi tarjeta que el banco pueda reimprimirlo o modificarlo",
+                "olvide el pin de mi tarjeta, pueden reimprimirlo",
+                "pueden modificar el pin de mi tarjeta si lo olvide"
+            ],
+            "responses": [
+                "No, al ser el codigo PIN un dato confidencial no es posible reimprimirlo o modificarlo en oficinas. Si la tarjeta de Credito es retenida en un cajero automatico del BMSC debera contactarse con el Call Center. Si no recuerda el PIN de la tarjeta, debera solicitar una nueva en Agencias del Banco con un costo el cual debera consultar en el tarifario."
+            ]
+        },
+        {
+            "tag": "registro_puntos",
+            "patterns": [
+                "como debo registrarme para ganar puntos",
+                "registrarme para acumular puntos",
+                "ganar puntos con mi tarjeta"
+            ],
+            "responses": [
+                "Te comentamos que, no necesitas realizar ningun procedimiento, automaticamente por el uso de tu Tarjeta de Debito, Tarjeta de Credito, operaciones electronicas y otros vas acumulando puntos, te invitamos a revisar nuestra tabla de bonificaciones en el boton REGLAMENTO en el siguiente link: https://www.bmsc.com.bo/benefits/club"
+            ]
+        },
+        {
+            "tag": "control_puntos",
+            "patterns": [
+                "como puedo realizar el control de mis puntos acumulados",
+                "consultar puntos acumulados",
+                "ver mis puntos acumulados"
+            ],
+            "responses": [
+                "Para realizar la consulta de tus puntos acumulados puedes ingresar a nuestra pagina web www.bms.com.bo al boton CONSULTA DE PUNTOS, necesitas ingresar la informacion de tu carnet de identidad, asi tambien, puedes contactarnos por lo siguientes medios: Linea Gratuita: 800 17 0777. Linea desde el Exterior: 591 22114010. Agencias a nivel nacional. Isla de puntos en Santa Cruz en Las Brisas 1er Piso de Lunes a Domingo de 10:00 a 20:00 y La Paz ubicada dentro la tienda Springfield, Zona San Miguel, calle Claudio Aliaga los Viernes y Sabado de 10:00 a 20:00, Domingos de 10:30 a 15:30."
+            ]
+        },
+        {
+            "tag": "plazo_canje_puntos",
+            "patterns": [
+                "tengo algun plazo para realizar el canje de mis puntos",
+                "plazo para canje de puntos",
+                "fecha limite para canjear puntos"
+            ],
+            "responses": [
+                "No, los puntos no tienen una fecha de vencimiento, puedes continuar acumulandolos o puedes realizar canjes parciales."
+            ]
+        },
+        {
+            "tag": "puntos_congelados",
+            "patterns": [
+                "que significa que mis puntos esten congelados",
+                "puntos congelados",
+                "porque mis puntos estan congelados"
+            ],
+            "responses": [
+                "Es importante tener en cuenta que si no realizas transacciones con tus cuentas del BMSC durante un periodo de 2 meses (60 dias), tus puntos entraran en un estado de congelamiento. En este caso, los puntos no se perderan, simplemente entraran en un estado inactivo. Para reactivar los puntos, puedes realizar diversas transacciones, como pagar con tu tarjeta de debito o credito, realizar transferencias, entre otras. Esto permitira que tus puntos vuelvan a estar activos y puedas utilizarlos para canjear por vales de consumo y productos. Es crucial realizar estas transacciones antes del 27 de cada mes para proceder con la reactivacion."
+            ]
+        },
+        {
+            "tag": "canje_puntos",
+            "patterns": [
+                "como realizo el canje de mis puntos",
+                "canjear puntos",
+                "donde puedo canjear mis puntos"
+            ],
+            "responses": [
+                "Tenemos varias alternativas que te permiten realizar el canje de puntos, puedes considerar las siguientes: - Agencias del Banco Mercantil Santa Cruz - Linea Gratuita (Bolivia): 800 17 0777 - Linea desde el Exterior: 591 22114010 - Isla de Puntos en la ciudad de Santa Cruz, ubicada dentro el Mall Las Brisas, Av. Cristo Redentor y 4to anillo (Lunes a Domingo de 10:00 a 20:00) - Isla de Punto en la ciudad de La Paz, ubicada dentro la tienda Springfield, Zona San Miguel, calle Claudio Aliaga (Viernes y Sabado de 10:00 a 20:00, Domingo de 10:30 a 15:30)."
+            ]
+        },
+        {
+            "tag": "plazos_canje_puntos",
+            "patterns": [
+                "cuales son los plazos de espera sobre el canje de puntos",
+                "plazos de espera para canje de puntos",
+                "cuanto tiempo tarda el canje de puntos"
+            ],
+            "responses": [
+                "Tienes tres opciones en el canje de puntos: VALES DE CONSUMO: De 7 a 15 dias calendario para la entrega. PRODUCTOS: De 15 a 30 dias calendario para la entrega. ISLA DE PUNTOS: Entrega inmediata de vales de consumo en nuestras dos Isla de puntos en la ciudad de Santa Cruz y en la ciudad La Paz."
+            ]
+        },
+        {
+            "tag": "entrega_domicilio_productos_canjeados",
+            "patterns": [
+                "puedo solicitar la entrega a domicilio de mis productos canjeados",
+                "entrega a domicilio de productos canjeados",
+                "envio de productos canjeados a domicilio"
+            ],
+            "responses": [
+                "Puedes solicitar el envio de productos a domicilio, sin embargo, los vales de consumo puede ser recogidos unicamente en agencias del Banco Mercantil Santa Cruz o en la Isla de Puntos en Santa Cruz y La Paz."
+            ]
+        },
+        {
+            "tag": "catalogo_productos_canje",
+            "patterns": [
+                "donde puedo ver el catalogo de productos para los canjes",
+                "catalogo de productos para canje",
+                "ver productos para canje"
+            ],
+            "responses": [
+                "Puedes ingresar a nuestra pagina web www.bmsc.com.bo al boton CONSULTA DE PUNTOS o al link https://www.bmsc.com.bo/benefits/club. De igual manera los catalogos en fisico se encuentran disponibles en cada agencia a nivel nacional."
+            ]
+        },
+        {
+            "tag": "canje_puntos_millas",
+            "patterns": [
+                "puedo realizar el cambio de mis puntos por millas",
+                "cambio de puntos por millas",
+                "canjear puntos por millas"
+            ],
+            "responses": [
+                "Si, puedes realizar el canje de tus puntos por millas, para esta solicitud, es necesario que cuentes con una cuenta activa y saber tu usuario y contrasena de Lifemiles. Recuerda que cada milla equivale a 3 puntos acumulados, a esta equivalencia, te comentamos que llegamos a tener promociones en que por cada 3 puntos, obtienes 2 millas."
+            ]
+        },
+        {
+            "tag": "contacto_call_center",
+            "patterns": [
+                "como puedo contactarme con el call center del banco",
+                "contacto con call center",
+                "numero de call center del banco"
+            ],
+            "responses": [
+                "Puedes contactarte mediante los siguientes canales de atencion: Linea Gratuita: 800 17 0777. Linea desde el Exterior: 591 22114010. Correo Electronico: callcenter@bmsc.com.bo."
+            ]
+        },
+        {
+            "tag": "direcciones_horarios_agencias_cajeros",
+            "patterns": [
+                "cuales son las direcciones y horarios de agencias y cajeros automaticos",
+                "direcciones y horarios de agencias y cajeros",
+                "ubicacion y horarios de agencias y cajeros automaticos"
+            ],
+            "responses": [
+                "Dirigete al apartado de Agencias y Cajeros automaticos dentro de la pagina web para conocer ubicaciones y horarios de atencion o en el siguiente enlace: https://bit.ly/MSCpaf"
+            ]
+        }
     ]
-  }
-  
+}
