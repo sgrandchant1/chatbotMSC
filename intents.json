@@ -60,7 +60,8 @@
                 "mecanismos de autenticacion robusta",
                 "Autenticacian robusta",
                 "Metodos de autenticacion",
-                "autenticacion"
+                "autenticacion",
+                ""
             ],
             "responses": [
                 "Los mecanismos de seguridad te permiten realizar tus transacciones de manera segura. Aqu\u00ed te presentamos los m\u00e1s utilizados: - Credenciales: Para ingresar a tu Banca M\u00f3vil o Banca por Internet por primera vez necesitas un usuario, contrase\u00f1a y pregunta secreta. Son personales y las definir\u00e1s t\u00fa, no las compartas con nadie. - Registro de dispositivo: Para realizar transacciones en tu Banca M\u00f3vil debes registrar el dispositivo que vayas a utilizar. - Segunda validaci\u00f3n: Para realizar transacciones se requiere de una clave token o c\u00f3digo de validaci\u00f3n que recibir\u00e1s directamente en tu App BMSC M\u00f3vil. El banco utiliza al menos dos de los tres factores principales de autenticaci\u00f3n de personas. Estos son: Factor de inherencia (algo que eres), factor de posesi\u00f3n (algo que tienes) y factor de conocimiento (algo que conoces)."
@@ -138,7 +139,8 @@
             "patterns": [
                 "Que debo hacer si cambie de dispositivo celular",
                 "Cambio de dispositivo celular",
-                "Nuevo dispositivo celular"
+                "Nuevo dispositivo celular",
+                "cambie de celular, que hago ?"
             ],
             "responses": [
                 "Si cambiaste de dispositivo celular es necesario que se elimine el registro del celular anterior y poder registrar uno nuevo. Puedes solicitar la eliminacion del dispositivo anterior mediante los siguientes canales: Call Center, siempre y cuando tengas tu numero de celular actualizado en nuestro sistema. Agencias, presentando tu carnet de identidad."
@@ -913,6 +915,15 @@
             ],
             "responses": [
                 "Dirigete al apartado de Agencias y Cajeros automaticos dentro de la pagina web para conocer ubicaciones y horarios de atencion o en el siguiente enlace: https://bit.ly/MSCpaf"
+            ]
+        },
+        {
+            "tag": "\u00a1Hola!_Me_alegra_que_est\u00e9s_interesado_en_explorar_",
+            "patterns": [
+                "necesito un credito:"
+            ],
+            "responses": [
+                "\u00a1Hola! Me alegra que est\u00e9s interesado en explorar las opciones de cr\u00e9dito con nosotros en el Banco Mercantil Santa Cruz. Ofrecemos una variedad de soluciones de cr\u00e9dito dise\u00f1adas para satisfacer tus necesidades, ya sea que sue\u00f1es con comprar una casa, un auto nuevo, o necesites un pr\u00e9stamo personal para viajes, educaci\u00f3n u otros gastos personales. Cada opci\u00f3n de cr\u00e9dito est\u00e1 dise\u00f1ada con t\u00e9rminos competitivos y flexibilidad. Para conocer m\u00e1s sobre nuestros productos espec\u00edficos y encontrar la mejor opci\u00f3n para tus necesidades, te invitamos a visitar la secci\u00f3n de cr\u00e9ditos en nuestro sitio web o contactarnos directamente para asistencia personalizada. \u00bfC\u00f3mo mas puedo asistirte hoy?"
             ]
         }
     ]

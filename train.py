@@ -76,7 +76,7 @@ batch_size = 8
 hidden_size = 8
 output_size = len(tags)
 input_size = len(X_train[0])
-learning_rate = 0.001
+learning_rate = 0.0001
 num_epochs = 1000
 
 # Create DataLoader

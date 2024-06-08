@@ -70,7 +70,7 @@ def add_feedback_to_intents(sentence, correct_response):
     
     # Check if the correct_response already exists in intents
     for intent in intents['intents']:
-        if any(correct_response.lower() == resp.lower() for resp in intent['responses']):
+        if correct_response in intent['responses']:
             intent['patterns'].append(sentence)
             break
     else:
@@ -87,18 +87,24 @@ def add_feedback_to_intents(sentence, correct_response):
         json.dump(intents, f, indent=4)
 
 def get_sql_query_from_chatgpt(prompt, schema, sample_values):
-    structured_prompt = f"""Dada la siguiente esquema de tabla y algunos valores de ejemplo:
+    structured_prompt = f"""Dada el siguiente esquema de tabla y algunos valores de ejemplo:
 Esquema de tabla:
 {json.dumps(schema, indent=2)}
 
 Valores de ejemplo:
 {json.dumps(sample_values, indent=2)}
 
-genera una condición de consulta Pandas de una sola línea para el siguiente pedido:
+genera una condición de consulta Pandas de una sola línea para el siguiente pedido: Recuerda que tienes que usar los 'backticks' al rededor de el nombre de la columna cada que uses uno de los nomrbres de la columna, debes usar los single quotations alrededor de caracteres o strings, no usar nada para numeros, y encapsular el query en double quotations. 
 
 "{prompt}"
 
-La condición debe ser válida para DataFrame.query() y no estar entrecomillada.
+La condición debe cumplir las siguientes reglas:
+- La condición completa debe estar entrecomillada con comillas dobles.
+- Los nombres de las columnas deben estar entre comillas invertidas (backticks).
+- Los valores de cadena deben estar entre comillas simples.
+- Los valores numéricos no deben tener comillas.
+- Usar  doble '=' cuando buscas en columnas 
+- No tener espacion entre commillas simples y comillas dobles
 El resultado que me das solo puede contener la condición de consulta, no está permitido nada más.
 """
     try:
@@ -161,7 +167,7 @@ while True:
             if tag == intent["tag"]:
                 print(f"{bot_name}: {random.choice(intent['responses'])}")
     else:
-        print(f"{bot_name}: No entiendo...")
+        print(f"{bot_name}: No tengo esa respuesta todavia...")
 
     feedback = input(f"{bot_name}: Esta es la respuesta que esperabas? (si/no): ")
     if feedback.lower() == "no":
